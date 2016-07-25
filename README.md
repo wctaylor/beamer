@@ -14,4 +14,4 @@ Each such theme is named according to:
     beamercolortheme[name].sty (color)
     beamerfonttheme[name].sty (font)
 
- The theme defined in this project has the <name> Slides
+ The theme defined in this project has the [name] Slides
