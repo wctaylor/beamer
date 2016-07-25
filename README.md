@@ -8,10 +8,10 @@ It includes the five .sty files used to define the theme along with the testing 
 All beamer themes contain colorthemes, fontthemes, innerthemes, outerthemes, and presentation themes (or just themes)
 
 Each such theme is named according to:
-    beamertheme<name>.sty (theme)
-    beamerinnertheme<name>.sty (inner)
-    beameroutertheme<name>.sty (outer)
-    beamercolortheme<name>.sty (color)
-    beamerfonttheme<name>.sty (font)
+    beamertheme[name].sty (theme)
+    beamerinnertheme[name].sty (inner)
+    beameroutertheme[name].sty (outer)
+    beamercolortheme[name].sty (color)
+    beamerfonttheme[name].sty (font)
 
  The theme defined in this project has the <name> Slides
