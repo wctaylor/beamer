@@ -2,32 +2,36 @@
 
 \setbeamertemplate{background}
 {
-    \includegraphics[width=\the\paperwidth]{images/background_full.jpg}
-  %\begin{tikzpicture}
-  %\useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
-  %\fill[color=gray] (0,2) rectangle (\the\paperwidth,\the\paperheight);
-  %\fill[color=orange] (0,0) rectangle(2.95,1.9);
-  %\fill[color=blue!50!cyan!80] (3.05,0) rectangle(\the\paperwidth,1.9);
-  %\ifnum\thepage>1\relax%
-  % \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
-  % \fi
-  %\end{tikzpicture}
+%\setbeamertemplate{background canvas}{%
+    \ifnum\c@framenumber=1%
+        % On title page
+        \includegraphics[width=\the\paperwidth]{images/background_full.jpg}
+    \else%
+            % Other frames background
+            \includegraphics[width=\the\paperwidth]{images/simple_gray2.jpg}
+    \fi%
+
 }
 
 % Title page
-\defbeamertemplate*{title page}{texsx}[1][]
+\setbeamertemplate{title page}
 {
-   \vskip6cm%
-    \begin{beamercolorbox}[wd=12cm,leftskip=3cm,sep=8pt,#1]{title page header}
-      \usebeamerfont{title}\inserttitle\par%
-    \end{beamercolorbox}%
-    \vskip0.75cm%
-    \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{author}
-      \usebeamerfont{author}\insertauthor%
+   \vskip3cm
+    \begin{beamercolorbox}{title page header}
+      \usebeamerfont{title}\inserttitle\par
     \end{beamercolorbox}
-     \vskip0.2cm%
-    \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{date}
-      \usebeamerfont{author}\insertdate%
+    \vskip0.75cm
+    \begin{beamercolorbox}[wd=12cm,leftskip=3cm]{author}
+      \usebeamerfont{author}\insertauthor
+    \end{beamercolorbox}
+     \vskip0.2cm
+    \begin{beamercolorbox}[wd=12cm,leftskip=6cm]{date}
+      \usebeamerfont{date}\insertdate
     \end{beamercolorbox}
   \vfill
+}
+
+\setbeamertemplate{frame}
+{
+
 }
