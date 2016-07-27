@@ -2,21 +2,20 @@
 
 \setbeamertemplate{background}
 {
-%\setbeamertemplate{background canvas}{%
-    \ifnum\c@framenumber=1%
+    \ifnum\c@framenumber=1
         % On title page
         \includegraphics[width=\the\paperwidth]{images/background_full.jpg}
-    \else%
+    \else
         % Other frames background
-        \includegraphics[width=\the\paperwidth]{images/simple_gray2.jpg}
-    \fi%
+         \includegraphics[width=\the\paperwidth]{images/simple_gray2.jpg}
+    \fi
 
 }
 
 % Title page
 \setbeamertemplate{title page}
 {
-   \vskip3cm
+   \vskip1cm
     \begin{beamercolorbox}{title page header}
       \usebeamerfont{title}\inserttitle\par
     \end{beamercolorbox}
@@ -24,7 +23,7 @@
     \begin{beamercolorbox}[wd=12cm,leftskip=3cm]{author}
       \usebeamerfont{author}\insertauthor
     \end{beamercolorbox}
-     \vskip0.2cm
+     \vskip1cm
     \begin{beamercolorbox}[wd=12cm,leftskip=6cm]{date}
       \usebeamerfont{date}\insertdate
     \end{beamercolorbox}
