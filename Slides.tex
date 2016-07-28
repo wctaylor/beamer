@@ -1,14 +1,14 @@
-\documentclass{beamer}
+\documentclass[20pt]{beamer}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\title{Generic Title}
+\title[Generic Title]{Generic Title}
 \date{Occasion with Date}
 \author{Will Taylor \\
         Brown University \\
         On behalf of the LUX/LZ Collaboration}
-
+\section{Will Taylor -- Brown University}
 \usetheme{Slides}
 
 \begin{document}
@@ -19,14 +19,14 @@
 
 \begin{frame}
     \frametitle{Test}
+    Hi
     \begin{itemize}
         \item{balls}
     \end{itemize}
 \end{frame}
 
 {
-\setbeamertemplate{background}
-{\includegraphics{images/simple_gray.jpg}}
+\setbeamercolor*{background canvas}{bg=midgray}
 
 \begin{frame}
     \frametitle{Different Background!}
@@ -35,5 +35,6 @@
 
 \begin{frame}
 \frametitle{Test3}
+
 \end{frame}
 \end{document}

@@ -3,30 +3,37 @@
 % Frame title
 \setbeamertemplate{frametitle}
 {
-    \vskip1cm
+    \vskip0.5cm
     \begin{beamercolorbox}[wd=12cm]{frametitle}
         \usebeamerfont{frametitle}\insertframetitle
     \end{beamercolorbox}
     \vskip0.1cm
     \begin{beamercolorbox}[wd=\paperwidth,ht=0.5cm]{frametitle}
         \begin{tikzpicture}
-            \fill[pakistangreen] (0,0) rectangle(\paperwidth, 0.1);
+            \fill[darkgreen] (0,0) rectangle(\paperwidth, 0.1);
         \end{tikzpicture}
     \end{beamercolorbox}
-%  \begin{tikzpicture}
-%  \begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm]{frametitle}
-%  \begin{tikzpicture}
-%  \useasboundingbox[fill=taupegray](0,0) rectangle(\the\paperwidth,1.2);
-%  \fill[pakistangreen] (0,0) rectangle(2.95,1.2);
-%  \fill[black] (3.05,0) rectangle(\the\paperwidth,1.2);
-%   \ifx\insertframesubtitle\@empty%
-%      {\node[anchor=west, white,font=\large] at (3.2,0.61){\insertframetitle};}
-%      \else%
-%      {\node[anchor= west, white,font=\large] at (3.2,0.81){\insertframetitle};%
-%       \node[anchor= west, white,font=\small] at (3.2,0.41){\insertframesubtitle};}%
-%      \fi
- % \end{tikzpicture}
-  %\end{beamercolorbox}
+}
+
+\setbeamertemplate{footline}
+{
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.5cm]{frametitle}
+        \begin{tikzpicture}
+            \fill[darkgreen] (0,0) rectangle(\paperwidth, 0.05);
+        \end{tikzpicture}
+    \end{beamercolorbox}
+    \vskip0.1cm
+    \begin{columns}
+        \begin{column}[t]{\paperwidth}
+            \justifying
+            \hspace*{1em}
+            \insertsection
+            \hfill
+            \justifying
+            \insertshorttitle \hspace*{2em} \insertframenumber
+            \hspace*{1em}
+        \end{column}%
+    \end{columns}
 }
 
 \mode<all>
