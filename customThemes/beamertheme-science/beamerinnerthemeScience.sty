@@ -1,0 +1,39 @@
+\mode<presentation>
+
+% Frame title
+\setbeamertemplate{frametitle}
+{
+    \vskip0.5cm
+    \begin{beamercolorbox}[wd=12cm]{frametitle}
+        \usebeamerfont{frametitle}\insertframetitle
+    \end{beamercolorbox}
+    \vskip0.1cm
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.5cm]{frametitle}
+        \begin{tikzpicture}
+            \fill[darkgreen] (0,0) rectangle(\paperwidth, 0.1);
+        \end{tikzpicture}
+    \end{beamercolorbox}
+}
+
+\setbeamertemplate{footline}
+{
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.5cm]{frametitle}
+        \begin{tikzpicture}
+            \fill[darkgreen] (0,0) rectangle(\paperwidth, 0.05);
+        \end{tikzpicture}
+    \end{beamercolorbox}
+    \vskip0.1cm
+    \begin{columns}
+        \begin{column}[t]{\paperwidth}
+            \justifying
+            \hspace*{1em}
+            \insertsection
+            \hfill
+            \justifying
+            \insertshorttitle \hspace*{2em} \insertframenumber
+            \hspace*{1em}
+        \end{column}%
+    \end{columns}
+}
+
+\mode<all>
