@@ -13,27 +13,35 @@
             \fill[darkgreen] (0,0) rectangle(\paperwidth, 0.1);
         \end{tikzpicture}
     \end{beamercolorbox}
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[xshift=-1cm,yshift=-0.85cm] at (current page.north east){%
+        \includegraphics[scale=0.0175]{/home/will/main/BrownPA/Presentations/Logos/LZ_Logo_Green_transparent_flatgreen.png}};
+    \end{tikzpicture}
 }
 
 \setbeamertemplate{footline}
 {
-    \begin{beamercolorbox}[wd=\paperwidth,ht=0.5cm]{frametitle}
-        \begin{tikzpicture}
-            \fill[darkgreen] (0,0) rectangle(\paperwidth, 0.05);
-        \end{tikzpicture}
-    \end{beamercolorbox}
-    \vskip0.1cm
-    \begin{columns}
-        \begin{column}[t]{\paperwidth}
-            \justifying
-            \hspace*{1em}
-            \insertsection
-            \hfill
-            \justifying
-            \insertshorttitle \hspace*{2em} \insertframenumber
-            \hspace*{1em}
-        \end{column}%
-    \end{columns}
+    \ifnum\c@framenumber=1
+
+    \else
+        \begin{beamercolorbox}[wd=\paperwidth,ht=0.5cm]{frametitle}
+            \begin{tikzpicture}
+                \fill[darkgreen] (0,0) rectangle(\paperwidth, 0.05);
+            \end{tikzpicture}
+        \end{beamercolorbox}
+        \vskip0.1cm
+        \begin{columns}
+            \begin{column}[t]{\paperwidth}
+                \justifying
+                \hspace*{1em}
+                \insertsection
+                \hfill
+                \justifying
+                \insertshorttitle \hspace*{2em} \insertframenumber
+                \hspace*{1em}
+            \end{column}%
+        \end{columns}
+    \fi
 }
 
 \mode<all>
